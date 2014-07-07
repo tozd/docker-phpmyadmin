@@ -26,4 +26,8 @@ server {
     location /phpmyadmin/setup {
         return 403;
     }
+
+    location ~ /\. {
+        return 403;
+    }
 }
