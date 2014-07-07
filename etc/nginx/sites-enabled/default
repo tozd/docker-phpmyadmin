@@ -12,6 +12,10 @@ server {
         index index.php;
     }
 
+    location ~ /\. {
+        return 403;
+    }
+
     location ~ \.php$ {
         try_files $uri =404;
         include fastcgi_php;
@@ -24,10 +28,6 @@ server {
 
     # Disallow web setup
     location /phpmyadmin/setup {
-        return 403;
-    }
-
-    location ~ /\. {
         return 403;
     }
 }
