@@ -1,0 +1,29 @@
+server {
+    listen 80 default_server;
+    server_name _;
+
+    root /usr/share;
+
+    location / {
+        return 404;
+    }
+
+    location /phpmyadmin {
+        index index.php;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        include fastcgi_php;
+    }
+
+    # Disallow access to libraries
+    location /phpmyadmin/libraries {
+        return 403;
+    }
+
+    # Disallow web setup
+    location /phpmyadmin/setup {
+        return 403;
+    }
+}
