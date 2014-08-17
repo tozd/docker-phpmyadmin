@@ -14,6 +14,6 @@ $dbuser='';
 $dbpass='';
 $basepath='';
 $dbname='';
-$dbserver='dbmysql.mysql.server2.docker';
+$dbserver='mysql.mysql.server2.docker';
 $dbport='3306';
 $dbtype='mysql';
