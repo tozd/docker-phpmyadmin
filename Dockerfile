@@ -1,4 +1,4 @@
-FROM cloyne/php
+FROM tozd/php:5.5
 
 # We want to enable configuration even if dbname is empty,
 # because we do not want to set dbname because then we need
