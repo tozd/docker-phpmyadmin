@@ -1,5 +1,8 @@
 FROM tozd/php:5.5
 
+ENV PHPMYADMIN_DBSERVER mysql
+ENV PHPMYADMIN_DBPORT 3306
+
 # We want to enable configuration even if dbname is empty,
 # because we do not want to set dbname because then we need
 # a special database for phpMyAdmin for advanced features.
