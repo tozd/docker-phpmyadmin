@@ -1,4 +1,4 @@
-Image extending [tozd/php](https://github.com/tozd/php) image with [phpMyAdmin](https://www.phpmyadmin.net/).
+Image extending [tozd/php](https://github.com/tozd/docker-php) image with [phpMyAdmin](https://www.phpmyadmin.net/).
 
 To configure to which database to connect, use environment variables:
 * `PHPMYADMIN_DBSERVER` – hostname of the database, default `mysql`
