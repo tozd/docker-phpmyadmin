@@ -8,7 +8,7 @@ ENV PHPMYADMIN_DBPORT 3306
 # a special database for phpMyAdmin for advanced features.
 
 RUN apt-get update -q -q && \
- apt-get install phpmyadmin --yes --force-yes && \
+ apt-get install phpmyadmin php7.2-mbstring --yes && \
  sed -i 's/!empty(\$dbname)/TRUE/' /etc/phpmyadmin/config.inc.php && \
  chown -Rh :fcgi-php /var/lib/phpmyadmin && \
  chown -Rh fcgi-php /var/lib/phpmyadmin/tmp && \
