@@ -21,6 +21,11 @@ server {
         include fastcgi_php;
     }
 
+    # Disallow access to templates
+    location /phpmyadmin/templates {
+        return 403;
+    }
+
     # Disallow access to libraries
     location /phpmyadmin/libraries {
         return 403;
