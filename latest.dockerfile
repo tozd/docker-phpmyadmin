@@ -1,4 +1,4 @@
-FROM tozd/php:7.2
+FROM registry.gitlab.com/tozd/docker/php:7.2
 
 ENV PHPMYADMIN_DBSERVER mysql
 ENV PHPMYADMIN_DBPORT 3306
