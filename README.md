@@ -22,8 +22,8 @@ Available as:
 
 ## Description
 
-Image extending [tozd/php](https://gitlab.com/tozd/docker/php) image with [phpMyAdmin](https://www.phpmyadmin.net/).
-When the container runs it is available at `/phpmyadmin/` URL.
+Image provides [phpMyAdmin](https://www.phpmyadmin.net/).
+When the container runs phpMyAdmin is available at `/phpmyadmin/` URL.
 
 By default it is intended to be used for a installation-wide web admin where each user sees databases they have access to, but you can configure it differently, too (you can mount a
 volume or extend the image to add `.php` configuration files to `/etc/phpmyadmin/conf.d`).
