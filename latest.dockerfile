@@ -1,7 +1,7 @@
-FROM registry.gitlab.com/tozd/docker/php:7.2
+FROM registry.gitlab.com/tozd/docker/php:8.2
 
-ENV PHPMYADMIN_DBSERVER mysql
-ENV PHPMYADMIN_DBPORT 3306
+ENV PHPMYADMIN_HOST=mysql
+ENV PHPMYADMIN_PORT=3306
 
 VOLUME /etc/phpmyadmin/conf.d
 
@@ -9,11 +9,11 @@ VOLUME /etc/phpmyadmin/conf.d
 # because we do not want to set dbname because then we need
 # a special database for phpMyAdmin for advanced features.
 RUN apt-get update -q -q && \
- apt-get install phpmyadmin --yes --force-yes && \
- sed -i 's/!empty(\$dbname)/TRUE/' /etc/phpmyadmin/config.inc.php && \
- chown -Rh :fcgi-php /var/lib/phpmyadmin && \
- chown -Rh fcgi-php /var/lib/phpmyadmin/tmp && \
- for file in /etc/php/7.2/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done && \
- apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
+  apt-get install phpmyadmin --yes --force-yes && \
+  sed -i 's/!empty(\$dbname)/TRUE/' /etc/phpmyadmin/config.inc.php && \
+  chown -Rh :fcgi-php /var/lib/phpmyadmin && \
+  chown -Rh fcgi-php /var/lib/phpmyadmin/tmp && \
+  for file in /etc/php/8.2/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done && \
+  apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 COPY ./etc /etc

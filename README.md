@@ -4,8 +4,8 @@
 
 Available as:
 
-* [`tozd/phpmyadmin`](https://hub.docker.com/r/tozd/phpmyadmin)
-* [`registry.gitlab.com/tozd/docker/phpmyadmin`](https://gitlab.com/tozd/docker/phpmyadmin/container_registry)
+- [`tozd/phpmyadmin`](https://hub.docker.com/r/tozd/phpmyadmin)
+- [`registry.gitlab.com/tozd/docker/phpmyadmin`](https://gitlab.com/tozd/docker/phpmyadmin/container_registry)
 
 ## Description
 
@@ -14,8 +14,8 @@ By default It is intended to be used for a installation-wide web admin where eac
 
 To configure to which database to connect, use environment variables:
 
-* `PHPMYADMIN_DBSERVER` – hostname of the database, default `mysql`
-* `PHPMYADMIN_DBPORT` – port of the database, default `3306`
+- `PHPMYADMIN_HOST` – hostname of the database, default `mysql`
+- `PHPMYADMIN_PORT` – port of the database, default `3306`
 
 You can also mount a `/etc/phpmyadmin/conf.d` volume with additional `.php` configuration files.
 One of such file should be a `blowfish_secret.inc.php` file with contents like:
