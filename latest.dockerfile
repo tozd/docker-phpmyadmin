@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/tozd/docker/php:8.2
+FROM registry.gitlab.com/tozd/docker/php:8.3
 
 ENV PHPMYADMIN_HOST=mysql
 ENV PHPMYADMIN_PORT=3306
@@ -13,7 +13,7 @@ RUN apt-get update -q -q && \
   sed -i 's/!empty(\$dbname)/TRUE/' /etc/phpmyadmin/config.inc.php && \
   chown -Rh :fcgi-php /var/lib/phpmyadmin && \
   chown -Rh fcgi-php /var/lib/phpmyadmin/tmp && \
-  for file in /etc/php/8.2/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done && \
+  for file in /etc/php/8.3/mods-available/*.ini; do phpenmod $(basename -s .ini "$file"); done && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
 COPY ./etc /etc
