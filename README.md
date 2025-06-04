@@ -13,7 +13,7 @@ Available as:
 
 ## Tags
 
-- `latest`: phpMyAdmin v5.1.1
+- `latest`: phpMyAdmin v5.2.1
 
 ## Variables
 
