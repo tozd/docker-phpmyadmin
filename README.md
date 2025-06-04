@@ -41,5 +41,5 @@ Without the file, pypMyAdmin will use one baked and shared in the Docker image.
 
 ## GitHub mirror
 
-There is also a [read-only GitHub mirror available](https://github.com/tozd/docker-phmygadmin),
+There is also a [read-only GitHub mirror available](https://github.com/tozd/docker-phpmyadmin),
 if you need to fork the project there.
